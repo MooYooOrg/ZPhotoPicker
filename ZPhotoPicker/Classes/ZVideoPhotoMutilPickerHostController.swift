@@ -24,7 +24,7 @@ class ZVideoPhotoMutilPickerHostController: ZPhotoesListController {
         
         super.viewDidLoad()
         collectionView?.allowsMultipleSelection = true
-        
+        self.extendedLayoutIncludesOpaqueBars = true
         bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: bottomLayoutGuide.length + 50)
         bottomView.maxCount = dataSource?.maxSelectedCount(self) ?? 0
         bottomView.selectedCount = dataSource?.numberOfItemsSelected(self) ?? 0
